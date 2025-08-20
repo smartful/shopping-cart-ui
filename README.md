@@ -1,4 +1,4 @@
-# Shopping Cart UI
+# 🛒 Shopping Cart UI
 
 A webapp to practice the React Context API.
 
