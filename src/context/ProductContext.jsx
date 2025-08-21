@@ -1,6 +1,6 @@
-import { createContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 
-export const ProductContext = createContext();
+const ProductContext = createContext();
 
 export function ProductProvider({ children }) {
   const [products, setProducts] = useState([]);
@@ -25,4 +25,8 @@ export function ProductProvider({ children }) {
   }, []);
 
   return <ProductContext.Provider value={{ products, loading, error }}>{children}</ProductContext.Provider>;
+}
+
+export function useProducts() {
+  return useContext(ProductContext);
 }
